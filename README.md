@@ -1,4 +1,4 @@
-# [CEMeNT](https://cement-psaap.github.io/) at NUWEST
+# [CEMeNT](https://cement-psaap.github.io/) at [NUWEST](https://illinois-ceesd.github.io/nuwest/)
 
 Jan 18th 2024, Albuquerque, NM
 
