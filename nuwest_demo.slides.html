@@ -7440,7 +7440,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="CEMeNT-at-NUWEST">CEMeNT at NUWEST<a class="anchor-link" href="#CEMeNT-at-NUWEST">¶</a></h1><p>Python based Acceleration and Abstraction in Monte Carlo Dynamic Code with Numba</p>
+<h1 id="CEMeNT-at-NUWEST"><a href="https://cement-psaap.github.io/">CEMeNT</a> at <a href="https://illinois-ceesd.github.io/nuwest/">NUWEST</a><a class="anchor-link" href="#CEMeNT-at-NUWEST">¶</a></h1><p>Python based Acceleration and Abstraction in Monte Carlo Dynamic Code with Numba</p>
 <p><a href="https://jpmorgan98.github.io/">Joanna Piper Morgan</a></p>
 <p><a href="https://cement-psaap.github.io/">Center for Exascale Monte Carlo Neutron Transport</a>
 Oregon State University</p>
@@ -7502,6 +7502,7 @@ Oregon State University</p>
 <li><a href="https://medium.com/rapids-ai/the-life-of-a-numba-kernel-a-compilation-pipeline-taking-user-defined-functions-in-python-to-cuda-71cc39b77625">The Life of a Numba Kernel: A Compilation Pipeline Taking User Defined Functions in Python to CUDA Kernels</a></li>
 <li><a href="https://nyu-cds.github.io/python-numba/">Software Carpentry Numba Guide</a></li>
 <li><a href="https://towardsdatascience.com/cuda-by-numba-examples-1-4-e0d06651612f">CUDA by Numba Examples</a></li>
+<li><a href="">CFD implemented in Numba</a></li>
 </ul>
 <p>MC/DC links</p>
 <ul>
@@ -7545,7 +7546,7 @@ Oregon State University</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Basics-of-Numba-(30min)">Basics of Numba (30min)<a class="anchor-link" href="#Basics-of-Numba-(30min)">¶</a></h2>
+<h1 id="Basics-of-Numba-(30min)">Basics of Numba (30min)<a class="anchor-link" href="#Basics-of-Numba-(30min)">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7571,7 +7572,7 @@ conda activate numba_live_demo.ipynb
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=761767ec">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7586,29 +7587,35 @@ conda activate numba_live_demo.ipynb
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72e949a3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Numba's-threading-model">Numba's <code>threading</code> model<a class="anchor-link" href="#Numba's-threading-model">¶</a></h2>
+<h2 id="Numba's-threading-model">Numba's <code>threading</code> model<a class="anchor-link" href="#Numba's-threading-model">¶</a></h2><ul>
+<li>We can do SIMD type operations to process lots of data quickly</li>
+<li>AVX acceleration</li>
+</ul>
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=da64f33c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Using-NumPy-functions-in-Numba">Using NumPy functions in Numba<a class="anchor-link" href="#Using-NumPy-functions-in-Numba">¶</a></h2>
+<h2 id="Using-NumPy-functions-in-Numba">Using NumPy functions in Numba<a class="anchor-link" href="#Using-NumPy-functions-in-Numba">¶</a></h2><ul>
+<li>Most NumPy functions are already either written in or linking to compiled code</li>
+<li>Numba can</li>
+</ul>
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a7831b32">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7616,41 +7623,80 @@ conda activate numba_live_demo.ipynb
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Odds-and-ends">Odds and ends<a class="anchor-link" href="#Odds-and-ends">¶</a></h2><ul>
-<li>Lots of other compiler commands ()</li>
+<li>Lots of other compiler commands to know ()</li>
+<li>Generation of</li>
+<li>Binding other scripts to Numba functions</li>
 </ul>
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=71ff8da5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Numba's-limitations">Numba's limitations<a class="anchor-link" href="#Numba's-limitations">¶</a></h2>
+<h2 id="Numba's-limitations">Numba's limitations<a class="anchor-link" href="#Numba's-limitations">¶</a></h2><ul>
+<li>No true OpenMP type parallelism ()</li>
+<li>Dynamic typing is deeply flawed and really not recommended</li>
+<li>No GPU operability on AMD or Intel GPUs....yet (work ongoing)</li>
+<li>Profiling within Numba kernels is not supported</li>
+<li>Very vauge compiler errors</li>
+<li><code>fastmath</code> only available for Intel</li>
+<li>Can feel pretty hacky once you go past basic operability</li>
+</ul>
 </div>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=03c6d600">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Into-the-Weeds">Into the Weeds<a class="anchor-link" href="#Into-the-Weeds">¶</a></h1><p><a href="https://github.com/jpmorgan98/nuwest-mcdc-jpmorgan/blob/main/NUWEST_jpmorgan_cement_mcdc.pptx">Back to the powerpoint</a></p>
+<h2 id="Into-the-Weeds-with-Numba">Into the Weeds with Numba<a class="anchor-link" href="#Into-the-Weeds-with-Numba">¶</a></h2><p><a href="https://github.com/jpmorgan98/nuwest-mcdc-jpmorgan/blob/main/NUWEST_jpmorgan_cement_mcdc.pptx">Back to the powerpoint</a></p>
 <p><em>for fun animations</em> <code>ᕙ(▀̿ĺ̯▀̿ ̿)ᕗ</code></p>
 </div>
 </div>
 </div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb19ec17">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Other-Python-Accelerators-for-CPUs-and-GPUs">Other Python Accelerators for CPUs and GPUs<a class="anchor-link" href="#Other-Python-Accelerators-for-CPUs-and-GPUs">¶</a></h2><p>The world of HPC Python is very exciting!!!!!!</p>
+<ul>
+<li><a href="https://github.com/kokkos/pykokkos">PyKokkos</a></li>
+<li><a href="https://jax.readthedocs.io/en/latest/notebooks/quickstart.html">JAX compiler from Google</a></li>
+<li><a href="https://documen.tician.de/pycuda/">PyCUDA</a> and <a href="https://documen.tician.de/pyopencl/">PyOpenCL</a> (you will have to write CUDA and OpenCL kernels)</li>
+<li><a href="https://cupy.dev/">CuPy</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=48364be9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Demo-and-Intro-of-MC/DC">Demo and Intro of MC/DC<a class="anchor-link" href="#Demo-and-Intro-of-MC/DC">¶</a></h1><p><a href="https://github.com/jpmorgan98/nuwest-mcdc-jpmorgan/blob/main/NUWEST_jpmorgan_cement_mcdc.pptx">Back to the powerpoint <code>(T⌓T)</code></a></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=64e00430">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Lets-run-a-Python">Lets run a Python<a class="anchor-link" href="#Lets-run-a-Python">¶</a></h2>
 </div>
 </div>
 </div>
