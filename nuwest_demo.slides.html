@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>nuwest_demo slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -7582,7 +7582,7 @@ conda activate numba_live_demo.ipynb
 <h2 id="Writing-a-Numba-function">Writing a Numba function<a class="anchor-link" href="#Writing-a-Numba-function">¶</a></h2><ul>
 <li><code>nopython</code> is the keyword to mean "compiled"</li>
 <li>We have to be careful about typing</li>
-<li>Watch out for weird compiler issues</li>
+<li>Watch out for weird compiler issues!</li>
 </ul>
 </div>
 </div>
@@ -7594,9 +7594,13 @@ conda activate numba_live_demo.ipynb
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Numba's-threading-model">Numba's <code>threading</code> model<a class="anchor-link" href="#Numba's-threading-model">¶</a></h2><ul>
-<li>We can do SIMD type operations to process lots of data quickly</li>
+<h2 id="Parallel-operations-in-Numba">Parallel operations in Numba<a class="anchor-link" href="#Parallel-operations-in-Numba">¶</a></h2><ul>
+<li>Numba will try and automatically parallelize some operations</li>
+<li>We can explicitly est</li>
+<li>Using <code>OpenMP</code> or <code>tbb</code> or <code>workqueues</code></li>
 <li>AVX acceleration</li>
+<li><a href="ufuncs">Numba <code>ufuncs</code> and <code>vectorized</code> flag</a></li>
+<li>GPU offloading</li>
 </ul>
 </div>
 </div>
@@ -7610,7 +7614,8 @@ conda activate numba_live_demo.ipynb
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Using-NumPy-functions-in-Numba">Using NumPy functions in Numba<a class="anchor-link" href="#Using-NumPy-functions-in-Numba">¶</a></h2><ul>
 <li>Most NumPy functions are already either written in or linking to compiled code</li>
-<li>Numba can</li>
+<li>Numba can link to</li>
+<li>For some NumPy functions consider their threading configs (for LAPACK or BLAS)</li>
 </ul>
 </div>
 </div>
@@ -7623,8 +7628,8 @@ conda activate numba_live_demo.ipynb
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Odds-and-ends">Odds and ends<a class="anchor-link" href="#Odds-and-ends">¶</a></h2><ul>
-<li>Lots of other compiler commands to know ()</li>
-<li>Generation of</li>
+<li>Lots of other <a href="https://numba.readthedocs.io/en/stable/user/jit.html#compilation-options">compiler commands</a> to know (<code>cache</code>, <code>fastmath</code>, <code>nogil</code>, <code>objectmode</code>)</li>
+<li>Generation of intermediate representations</li>
 <li>Binding other scripts to Numba functions</li>
 </ul>
 </div>
@@ -7638,7 +7643,7 @@ conda activate numba_live_demo.ipynb
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Numba's-limitations">Numba's limitations<a class="anchor-link" href="#Numba's-limitations">¶</a></h2><ul>
-<li>No true OpenMP type parallelism ()</li>
+<li>No true OpenMP type parallelism (save this <a href="">branch</a>)</li>
 <li>Dynamic typing is deeply flawed and really not recommended</li>
 <li>No GPU operability on AMD or Intel GPUs....yet (work ongoing)</li>
 <li>Profiling within Numba kernels is not supported</li>
@@ -7657,6 +7662,7 @@ conda activate numba_live_demo.ipynb
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Into-the-Weeds-with-Numba">Into the Weeds with Numba<a class="anchor-link" href="#Into-the-Weeds-with-Numba">¶</a></h2><p><a href="https://github.com/jpmorgan98/nuwest-mcdc-jpmorgan/blob/main/NUWEST_jpmorgan_cement_mcdc.pptx">Back to the powerpoint</a></p>
+<p><a href="https://www.infoworld.com/article/3247799/what-is-llvm-the-power-behind-swift-rust-clang-and-more.html">LLVM Intro</a></p>
 <p><em>for fun animations</em> <code>ᕙ(▀̿ĺ̯▀̿ ̿)ᕗ</code></p>
 </div>
 </div>
@@ -7696,7 +7702,7 @@ conda activate numba_live_demo.ipynb
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Lets-run-a-Python">Lets run a Python<a class="anchor-link" href="#Lets-run-a-Python">¶</a></h2>
+<h2 id="Lets-Push-some-particles">Lets Push some particles<a class="anchor-link" href="#Lets-Push-some-particles">¶</a></h2><p>to the demo notebook!</p>
 </div>
 </div>
 </div>
